@@ -1,0 +1,30 @@
+PODS:
+  - FeedKit (9.0.0)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
+  - KRActivityIndicatorView (3.0.4)
+  - KRProgressHUD (3.4.4):
+    - KRActivityIndicatorView (= 3.0.4)
+
+DEPENDENCIES:
+  - FeedKit
+  - Kingfisher
+  - KRProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - FeedKit
+    - Kingfisher
+    - KRActivityIndicatorView
+    - KRProgressHUD
+
+SPEC CHECKSUMS:
+  FeedKit: 9ffa2434af293df73ac069129900498b3f89cb2e
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
+  KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
+
+PODFILE CHECKSUM: 6b8ac668f2d4d6abcf79203d91b4d62a767b482b
+
+COCOAPODS: 1.9.0.beta.2

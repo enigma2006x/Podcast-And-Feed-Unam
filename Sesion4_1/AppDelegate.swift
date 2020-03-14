@@ -2,36 +2,48 @@
 //  AppDelegate.swift
 //  Sesion4_1
 //
-//  Created by Victor Aceves Garcia on 28/02/20.
-//  Copyright © 2020 Victor Aceves Garcia. All rights reserved.
+//  Created by Jose Antonio Trejo Flores on 28/02/20.
+//  Copyright © 2020 Jose Antonio Trejo Flores. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        appearanceNavigationBar()
+        appearanceTextField()
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    private func appearanceNavigationBar() {
+        
+        let backgroundColor = UIColor.purple
+        let tintColor = UIColor.white
+        
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = backgroundColor
+            appearance.titleTextAttributes = [.foregroundColor: tintColor]
+            appearance.largeTitleTextAttributes = [.foregroundColor: tintColor]
+            
+            UINavigationBar.appearance().tintColor = tintColor
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().compactAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            UINavigationBar.appearance().tintColor = tintColor
+            UINavigationBar.appearance().barTintColor = backgroundColor
+            UINavigationBar.appearance().isTranslucent = false
+        }
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    private func appearanceTextField() {
+         UITextField.appearance().backgroundColor = .white
     }
-
-
 }
 
